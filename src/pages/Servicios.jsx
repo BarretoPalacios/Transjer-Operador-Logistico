@@ -1,6 +1,6 @@
 import AdditionalServices from "../components/AdditionalServices";
 import Footer from "../components/Footer";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import ServicesDetail from "../components/ServicesDetail";
 
 
@@ -11,7 +11,6 @@ const Servicios = () => {
     <>
       <Navbar />
      <ServicesDetail />
-      
       <Footer />
     </>
   );
