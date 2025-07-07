@@ -7,7 +7,7 @@ import {
 
 } from "lucide-react";
 import WhatsAppButton from "../components/WhatsAppButton";
-import Navbar from "../components/navbar";
+import Navbar from "../components/Navbar";
 import Forms from "../components/Forms";
 import Footer from "../components/Footer";
 import ServicesSlider from "../components/ServicesSlider";
