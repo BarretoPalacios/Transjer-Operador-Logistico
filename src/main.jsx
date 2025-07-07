@@ -1,6 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, RouterProvider, ScrollRestoration } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
 import Servicios from "./pages/Servicios";  
@@ -8,7 +8,17 @@ import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
 import "./index.css";
 
-// Configurar las rutas
+// 1. Crear un Layout con ScrollRestoration
+const RootLayout = ({ children }) => {
+  return (
+    <>
+      {children}
+      <ScrollRestoration /> {/* Esto manejará el scroll automáticamente */}
+    </>
+  );
+};
+
+// 2. Configurar las rutas envolviendo cada página con el Layout
 const router = createBrowserRouter([
   {
     path: "*",
@@ -16,19 +26,35 @@ const router = createBrowserRouter([
   },
   {
     path: "/",
-    element: <Inicio />,
+    element: (
+      <RootLayout>
+        <Inicio />
+      </RootLayout>
+    ),
   },
   {
     path: "/servicios",
-    element: <Servicios />,
+    element: (
+      <RootLayout>
+        <Servicios />
+      </RootLayout>
+    ),
   },
   {
     path: "/nosotros",
-    element: <Nosotros />,
+    element: (
+      <RootLayout>
+        <Nosotros />
+      </RootLayout>
+    ),
   },
   {
     path: "/contacto",
-    element: <Contacto />,
+    element: (
+      <RootLayout>
+        <Contacto />
+      </RootLayout>
+    ),
   },
 ]);
 
