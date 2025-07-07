@@ -1,1 +1,10 @@
 @import "tailwindcss";
+
+.gradient-bg {
+ background: #004FAC;
+background: linear-gradient(90deg, rgba(0, 79, 172, 1) 0%, rgba(0, 169, 221, 1) 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}

@@ -3,12 +3,11 @@ import ReactDOM from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Inicio from "./pages/Inicio";
 import Nosotros from "./pages/Nosotros";
-import Servicios from "./pages/Servicios";  
-import Contacto from "./pages/Contacto";
+import Servicios from "./pages/Servicios";
+import  Contacto  from "./pages/Contacto"; 
 import NotFound from "./pages/NotFound";
-import "./index.css";
+import "./index.css"
 
-// Configurar las rutas
 const router = createBrowserRouter([
   {
     path: "*",
