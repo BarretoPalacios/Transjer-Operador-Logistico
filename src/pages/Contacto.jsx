@@ -1,6 +1,6 @@
 import { MapPin, Phone, Mail, Clock, Send } from 'lucide-react';
 import Forms from '../components/Forms';
-import Navbar from '../components/navbar';
+import Navbar from '../components/Navbar';
 import Footer from '../components/Footer';
 
 const ContactPage = () => {
