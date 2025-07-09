@@ -21,9 +21,9 @@ const WhatsAppButton = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const phoneNumber = "51937203853"; // Número sin el '+' inicial
+  const phoneNumber = "51913177037"; // Número sin el '+' inicial
   const defaultMessage = encodeURIComponent(
-    "Hola, estoy interesado en los servicios de seguridad de D&D Security SAC. ¿Podrían brindarme más información?"
+    "Hola, estoy interesado en los servicios de logistica de Transjer  ¿Podrían brindarme más información?"
   );
 
   const openWhatsApp = () => {

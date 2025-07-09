@@ -6,7 +6,9 @@ import Nosotros from "./pages/Nosotros";
 import Servicios from "./pages/Servicios";  
 import Contacto from "./pages/Contacto";
 import NotFound from "./pages/NotFound";
+import Flotas from "./pages/Flotas";
 import "./index.css";
+
 
 // 1. Crear un Layout con ScrollRestoration
 const RootLayout = ({ children }) => {
@@ -37,6 +39,14 @@ const router = createBrowserRouter([
     element: (
       <RootLayout>
         <Servicios />
+      </RootLayout>
+    ),
+  },
+  {
+    path: "/flotas",
+    element: (
+      <RootLayout>
+        <Flotas />
       </RootLayout>
     ),
   },

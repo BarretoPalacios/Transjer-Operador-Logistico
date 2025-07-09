@@ -1,38 +1,50 @@
 import { useRef, useState, useEffect } from 'react';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
-import { Link } from 'react-router-dom'; // o import { Link } from 'next/link' para Next.js
+import { ArrowRight, ChevronLeft, ChevronRight, Truck, Package, Warehouse, Clock, MapPin, Globe, Shield } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const ServicesCarousel = () => {
   const services = [
     {
-      id: 'seguridad-personal',
-      title: "Seguridad Personal",
-      description: "Protección de ejecutivos y personas, con guardaespaldas certificados y discreción absoluta.",
-      image: "img/img (1).jpg"
+      id: 'transporte-local',
+      title: "Transporte Local",
+      description: "Servicio de transporte urbano y metropolitano para distribución eficiente dentro de la ciudad con vehículos de 1 a 10 toneladas.",
+      image: "img/flota-1.jpg",
+      icon: <Truck className="w-8 h-8 text-black" />
     },
     {
-      id: 'seguridad-empresarial',
-      title: "Seguridad Empresarial",
-      description: "Resguardo y control de accesos en oficinas, empresas y condominios.",
-      image: "img/img (2).jpg"
+      id: 'transporte-nacional',
+      title: "Transporte Nacional",
+      description: "Cobertura en las 25 regiones del Perú con diferentes modalidades según el tipo de carga y urgencia del servicio.",
+      image: "img/flota-2.jpg",
+      icon: <Globe className="w-8 h-8 text-black" />
     },
     {
-      id: 'resguardo-bienes',
-      title: "Resguardo de Bienes",
-      description: "Custodia de bienes materiales, activos y carga en movimiento o en almacén.",
-      image: "img/img (3).jpg"
+      id: 'almacenamiento',
+      title: "Almacenamiento",
+      description: "Centros logísticos estratégicamente ubicados con almacenes convencionales, refrigerados y de máxima seguridad.",
+      image: "img/almacenamiento.jpg",
+      icon: <Warehouse className="w-8 h-8 text-black" />
     },
     {
-      id: 'seguridad-eventos',
-      title: "Seguridad para Eventos",
-      description: "Cobertura total para eventos corporativos, ferias, sociales y reuniones masivas.",
-      image: "img/img (4).jpg"
+      id: 'distribucion',
+      title: "Distribución",
+      description: "Servicio completo de distribución desde nuestros almacenes o directamente desde tus proveedores con seguimiento GPS.",
+      image: "img/flota-3.jpg",
+      icon: <Package className="w-8 h-8 text-black" />
     },
     {
-      id: 'videovigilancia',
-      title: "Videovigilancia 24/7",
-      description: "Instalación y monitoreo de cámaras con acceso remoto y grabación continua.",
-      image: "img/img (5).png"
+      id: 'transporte-express',
+      title: "Transporte Express",
+      description: "Entrega urgente en 24 horas para cargas prioritarias en rutas principales con vehículos dedicados.",
+      image: "img/flota-4.jpg",
+      icon: <Clock className="w-8 h-8 text-black" />
+    },
+    {
+      id: 'last-mile',
+      title: "Last Mile Delivery",
+      description: "Solución completa para la última milla con vehículos menores y personal capacitado para entregas finales.",
+      image: "img/flota-5.jpg",
+      icon: <MapPin className="w-8 h-8 text-black" />
     }
   ];
 
@@ -73,25 +85,39 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <section id="services" className="py-20 gradient-bg overflow-hidden">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-white">Nuestros Servicios</h2>
-        <p className="text-lg text-gray-200 text-center max-w-3xl mx-auto mb-12">
-          Ofrecemos una amplia gama de servicios de seguridad adaptados a las necesidades específicas de cada cliente, garantizando la máxima protección y tranquilidad.
-        </p>
+    <section id="services" className="py-20 bg-black overflow-hidden relative">
+      {/* Elementos decorativos */}
+      <div className="absolute top-0 left-0 w-full h-full opacity-10">
+        <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#FEC727] filter blur-3xl"></div>
+        <div className="absolute bottom-10 right-10 w-60 h-60 rounded-full bg-[#FEC727] filter blur-3xl"></div>
+      </div>
+      
+      <div className="container mx-auto px-4 relative z-10">
+        <div className="text-center mb-12">
+          <div className="inline-flex items-center justify-center bg-[#FEC727] bg-opacity-20 px-6 py-3 rounded-full mb-6">
+            <Truck className="w-6 h-6 mr-2 text-black" />
+            <span className="font-medium text-black">NUESTROS SERVICIOS</span>
+          </div>
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">Soluciones Logísticas Integrales</h2>
+          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+            Servicios de transporte y distribución diseñados para optimizar tu cadena de suministro
+          </p>
+        </div>
 
         <div className="relative">
           {/* Controles del carrusel */}
           <button 
             onClick={handlePrev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-blue-900 p-2 rounded-full shadow-lg transition-all hidden md:block"
+            className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-[#FEC727] hover:bg-[#FEC727]/90 text-black p-3 rounded-full shadow-lg transition-all hidden md:block"
+            aria-label="Servicio anterior"
           >
             <ChevronLeft className="w-6 h-6" />
           </button>
           
           <button 
             onClick={handleNext}
-            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/80 hover:bg-white text-blue-900 p-2 rounded-full shadow-lg transition-all hidden md:block"
+            className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-[#FEC727] hover:bg-[#FEC727]/90 text-black p-3 rounded-full shadow-lg transition-all hidden md:block"
+            aria-label="Siguiente servicio"
           >
             <ChevronRight className="w-6 h-6" />
           </button>
@@ -117,28 +143,43 @@ const ServicesCarousel = () => {
                         : "z-0 w-[80%] md:w-[30%] h-[400px] opacity-50 left-[25%] -translate-x-1/2"
                   }`}
                 >
-                  <div className={`bg-white rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-full`}>
-                    <img 
-                      src={service.image} 
-                      alt={service.title} 
-                      className={`w-full ${
-                        position === "center" ? "h-[300px]" : "h-[200px]"
-                      } object-cover`}
-                    />
+                  <div 
+                    className={`rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-all h-full border-2 ${
+                      position === "center" ? "border-[#FEC727]" : "border-transparent"
+                    }`}
+                    style={{ background: 'linear-gradient(to bottom, #1a1a1a, #111)' }}
+                  >
+                    <div className="relative h-[250px] overflow-hidden">
+                      <img 
+                        src={service.image} 
+                        alt={service.title} 
+                        className={`w-full h-full object-cover transition-transform duration-500 ${
+                          position === "center" ? "hover:scale-105" : ""
+                        }`}
+                      />
+                      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black to-transparent"></div>
+                    </div>
                     <div className={`p-6 ${
-                      position === "center" ? "h-[200px]" : "h-[200px]"
+                      position === "center" ? "h-[250px]" : "h-[200px]"
                     } flex flex-col`}>
-                      <h3 className={`font-bold ${
-                        position === "center" ? "text-xl" : "text-lg"
-                      }`}>{service.title}</h3>
-                      <p className={`text-gray-600 mb-4 flex-grow ${
-                        position === "center" ? "" : "text-sm"
+                      <div className="flex items-center mb-3">
+                        <div className="bg-[#FEC727] p-2 rounded-lg mr-4">
+                          {service.icon}
+                        </div>
+                        <h3 className={`font-bold ${
+                          position === "center" ? "text-xl text-white" : "text-lg text-gray-300"
+                        }`}>{service.title}</h3>
+                      </div>
+                      <p className={`mb-4 flex-grow ${
+                        position === "center" ? "text-gray-300" : "text-sm text-gray-400"
                       }`}>{service.description}</p>
                       <Link 
-                        to={`/servicio#${service.id}`} 
-                        className="text-blue-600 font-medium flex items-center hover:underline"
+                        to={`/servicios#${service.id}`} 
+                        className={`flex items-center ${
+                          position === "center" ? "text-[#FEC727] hover:text-[#FEC727]/90" : "text-gray-400"
+                        } font-medium transition-colors`}
                       >
-                        Saber más <ArrowRight className="w-4 h-4 ml-2" />
+                        Ver detalles <ArrowRight className="w-4 h-4 ml-2" />
                       </Link>
                     </div>
                   </div>
@@ -153,7 +194,9 @@ const ServicesCarousel = () => {
               <button
                 key={index}
                 onClick={() => setCurrentIndex(index)}
-                className={`w-3 h-3 rounded-full ${currentIndex === index ? 'bg-white' : 'bg-white/50'}`}
+                className={`w-3 h-3 rounded-full transition-all ${
+                  currentIndex === index ? 'bg-[#FEC727] w-6' : 'bg-gray-500'
+                }`}
                 aria-label={`Ir al servicio ${index + 1}`}
               />
             ))}
