@@ -1,20 +1,18 @@
 import { Truck, MapPin, Shield, Camera, Users, CheckCircle, Package, Clock } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
 import { useState } from 'react';
+import Navbar from "../components/Navbar"
+import Footer from "../components/Footer"
 
 const Flotas = () => {
   const [activeTab, setActiveTab] = useState('vehiculos');
 
   // Imágenes de flotas
   const fleetImages = [
-    { type: '2 TN', src: 'https://images.unsplash.com/photo-1557223562-6c77ef16210f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
-    { type: '5 TN', src: 'https://images.unsplash.com/photo-1631795583215-8dc655c4a8a1?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
-    { type: '10 TN', src: 'https://images.unsplash.com/photo-1601574028976-3b2615d71e4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
-    { type: '15 TN', src: 'https://images.unsplash.com/photo-1601574028976-3b2615d71e4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' }
-  ];
-
-  // Imágenes de beneficios
+    { type: '2 TN', src: '/img/flota-1.jpg' },
+    { type: '5 TN', src: '/img/flota-2.jpg' },
+    { type: '10 TN', src: '/img/flota-3.jpg' },
+    { type: '15 TN', src: '/img/flota-4.jpg' }
+  ];  //4mágenes de beneficios
   const benefitImages = [
     { title: 'Monitoreo GPS', src: 'https://images.unsplash.com/photo-1581093057305-25f0a6f3a1e3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
     { title: 'Cámaras de Seguridad', src: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80' },
@@ -22,24 +20,23 @@ const Flotas = () => {
   ];
 
   return (
-    <div className="bg-gray-100 min-h-screen">
+    <div className="bg-black">
       <Navbar />
-      
       {/* Hero Banner */}
-      <div className="relative bg-black text-white py-20 md:py-28">
+      <div className="relative bg-yellow-500 text-white py-10 md:py-20">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1601574028857-2d0a48483fa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-50" />
-        <div className="relative z-10 container mx-auto px-4 sm:px-6 text-center">
+        <div className="relative  container mx-auto px-4 sm:px-6 text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-4 md:mb-6">
-            <span className="text-yellow-400">NUESTRA FLOTA</span>
+            <span className="text-black">NUESTRA FLOTA</span>
           </h1>
-          <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto">
+          <p className="text-lg md:text-xl lg:text-2xl max-w-3xl mx-auto text-black">
             15 vehículos modernos listos para transportar tu mercadería a todo el Perú
           </p>
         </div>
       </div>
 
       {/* Tabs Navigation */}
-      <div className="container mx-auto px-4 sm:px-6 -mt-8 md:-mt-10">
+      <div className="container mx-auto px-4 sm:px-6">
         <div className="flex overflow-x-auto scrollbar-hide">
           <button
             onClick={() => setActiveTab('vehiculos')}
@@ -49,6 +46,7 @@ const Flotas = () => {
                 : 'bg-gray-200 text-gray-800 hover:bg-gray-300'
             }`}
           >
+          
             <Truck className="inline mr-2 w-4 h-4 md:w-5 md:h-5" /> Tipos de Vehículos
           </button>
           <button
@@ -142,7 +140,7 @@ const Flotas = () => {
               <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg mb-6 md:mb-8 h-full">
                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1601574028976-3b2615d71e4a?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80" 
+                    src="/img/flota-3.jpg" 
                     alt="Flota TRANSJER" 
                     className="w-full h-full object-cover"
                   />
@@ -245,7 +243,7 @@ const Flotas = () => {
               <div className="bg-white p-6 md:p-8 rounded-xl shadow-lg h-full">
                 <div className="relative h-64 md:h-80 rounded-lg overflow-hidden mb-6">
                   <img 
-                    src="https://images.unsplash.com/photo-1544620347-c4fd8a3b0f1b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2069&q=80" 
+                    src="/img/equipo-transjer.jpg" 
                     alt="Cobertura Nacional" 
                     className="w-full h-full object-cover"
                   />
@@ -430,10 +428,13 @@ const Flotas = () => {
                 </div>
               </div>
             </div>
+
+          
           </div>
         )}
       </div>
-      <Footer />
+
+        <Footer />
     </div>
   );
 };
