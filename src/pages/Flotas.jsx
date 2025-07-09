@@ -1,4 +1,6 @@
 import { Truck, MapPin, Shield, Camera, Users, CheckCircle, Package, Clock } from 'lucide-react';
+import Navbar from '../components/Navbar';
+import Footer from '../components/Footer';
 import { useState } from 'react';
 
 const Flotas = () => {
@@ -21,6 +23,8 @@ const Flotas = () => {
 
   return (
     <div className="bg-gray-100 min-h-screen">
+      <Navbar />
+      
       {/* Hero Banner */}
       <div className="relative bg-black text-white py-20 md:py-28">
         <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1601574028857-2d0a48483fa3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80')] bg-cover bg-center opacity-50" />
@@ -429,6 +433,7 @@ const Flotas = () => {
           </div>
         )}
       </div>
+      <Footer />
     </div>
   );
 };
