@@ -25,7 +25,9 @@ function Footer() {
                 <img src="/img/logo-transjer.png" alt="logo de transjer"  className='w-20 '/>
               </div>
               <p className="text-gray-300 mb-6">
-                Soluciones logísticas integrales. Transporte seguro y eficiente a nivel nacional.
+                RUC:  20607981176 <br />
+RAZON SOCIAL: Transjer Operador Logistico S.a.C. 
+
               </p>
               <div>
                 <h4 className="text-lg font-semibold mb-3 relative pb-2 after:absolute after:bottom-0 after:left-0 after:w-10 after:h-0.5 after:bg-[#FEC727]">
@@ -169,7 +171,7 @@ function Footer() {
                 <li className="flex items-start">
                   <Phone className="w-5 h-5 text-[#FEC727] mr-3 mt-1 flex-shrink-0" />
                   <a
-                    href="tel:+51999999999"
+                    href="tel:+51913117037"
                     className="text-gray-300 hover:text-[#FEC727] transition"
                   >
                     +51 913 117 037
@@ -178,7 +180,7 @@ function Footer() {
                 <li className="flex items-start">
                   <Mail className="w-5 h-5 text-[#FEC727] mr-3 mt-1 flex-shrink-0" />
                   <a
-                    href="mailto:info@transjer.com"
+                    href="mailto:comercial@transjer.com"
                     className="text-gray-300 hover:text-[#FEC727] transition"
                   >
                     comercial@transjer.com

@@ -1,6 +1,18 @@
-import { Users, Globe, Target, Shield, BarChart2, Award, Briefcase, Truck, Package, Clock, MapPin } from 'lucide-react';
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import {
+  Users,
+  Globe,
+  Target,
+  Shield,
+  BarChart2,
+  Award,
+  Briefcase,
+  Truck,
+  Package,
+  Clock,
+  MapPin,
+} from "lucide-react";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 import WhatsAppButton from "../components/WhatsAppButton";
 
 const Nosotros = () => {
@@ -8,16 +20,18 @@ const Nosotros = () => {
     <>
       <WhatsAppButton />
       <Navbar />
-      
+
       <div className="bg-white text-black">
         {/* Hero Section */}
-        <div 
+        <div
           className="relative h-96 w-full flex items-center justify-center bg-black bg-cover bg-center"
           // style={{ backgroundImage: "url('img/transporte-hero.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}
         >
           <div className="absolute inset-0 bg-black opacity-70"></div>
           <div className="relative z-10 text-center px-4">
-            <h1 className="text-5xl md:text-6xl font-bold text-[#FEC727] mb-4">TRANSJER</h1>
+            <h1 className="text-5xl md:text-6xl font-bold text-[#FEC727] mb-4">
+              TRANSJER
+            </h1>
             <p className="text-xl text-white max-w-2xl mx-auto">
               Soluciones logísticas y de transporte a nivel local y nacional
             </p>
@@ -25,41 +39,50 @@ const Nosotros = () => {
         </div>
 
         {/* Nuestra Historia */}
-        <div className="max-w-6xl mx-auto py-20 px-4">
-          <div className="flex flex-col md:flex-row gap-12 items-center">
-            <div className="md:w-1/2">
-              <h2 className="text-4xl font-bold mb-6">
-                Nuestra <span className="text-[#FEC727]">Historia</span>
-              </h2>
-              <p className="text-lg mb-4">
-                TRANSJER es una empresa especializada en logística de transporte y distribución física de mercadería a nivel local y nacional. 
-              </p>
-              <p className="text-lg mb-6">
-                Contamos con un equipo altamente capacitado y con amplia experiencia en el sector, garantizando un servicio seguro, eficiente y adaptado a las necesidades de cada cliente.
-              </p>
-              <div className="grid grid-cols-2 gap-4">
-                {[
-                  { value: '100+', label: 'Vehículos propios' },
-                  { value: '500+', label: 'Clientes satisfechos' },
-                  { value: '24/7', label: 'Disponibilidad' },
-                  { value: '100%', label: 'Cobertura nacional' }
-                ].map((item, index) => (
-                  <div key={index} className="bg-gray-100 p-4 rounded-lg border-l-4 border-[#FEC727]">
-                    <p className="text-2xl font-bold text-black">{item.value}</p>
-                    <p className="text-sm">{item.label}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="md:w-1/2">
-              <img 
-                src="img/equipo-transjer.jpg" 
-                alt="Flota de TRANSJER" 
-                className="rounded-xl shadow-2xl w-full h-auto"
-              />
-            </div>
+       <div className="max-w-6xl mx-auto py-20 px-4">
+  <div className="flex flex-col md:flex-row gap-12 items-center">
+    <div className="md:w-1/2">
+      <h2 className="text-4xl font-bold mb-6">
+        Nuestra <span className="text-[#FEC727]">Historia</span>
+      </h2>
+      <p className="text-lg mb-4">
+        TRANSJER es una empresa especializada en logística de transporte
+        y distribución física de mercadería a nivel local y nacional.
+      </p>
+      <p className="text-lg mb-6">
+        Contamos con un equipo altamente capacitado y con amplia
+        experiencia en el sector, garantizando un servicio seguro,
+        eficiente y adaptado a las necesidades de cada cliente.
+      </p>
+      <div className="grid grid-cols-2 gap-4">
+        {[
+          { value: "Flota propia", label: "Vehículos equipados y monitoreados" },
+          { value: "Clientes satisfechos", label: "Relaciones de confianza a largo plazo" },
+          { value: "Servicio continuo", label: "Disponibilidad operativa los 7 días de la semana" }, 
+          { value: "Cobertura local y nacional", label: "Alcance en todas las regiones del Perú" },
+        ].map((item, index) => (
+          <div
+            key={index}
+            className="bg-gray-100 p-4 rounded-lg border-l-4 border-[#FEC727]"
+          >
+            <p className="text-xl font-bold text-black">
+              {item.value}
+            </p>
+            <p className="text-sm">{item.label}</p>
           </div>
-        </div>
+        ))}
+      </div>
+    </div>
+    <div className="md:w-1/2">
+      <img
+        src="img/equipo-transjer.jpg"
+        alt="Equipo TRANSJER"
+        className="rounded-xl shadow-2xl w-full h-auto"
+      />
+    </div>
+  </div>
+</div>
+
 
         {/* Misión y Visión */}
         <div className="bg-black py-20">
@@ -67,7 +90,7 @@ const Nosotros = () => {
             <h2 className="text-4xl font-bold text-center mb-16 text-[#FEC727]">
               Nuestra <span className="text-white">Esencia</span>
             </h2>
-            
+
             <div className="grid md:grid-cols-2 gap-12">
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="flex items-center mb-6">
@@ -75,17 +98,23 @@ const Nosotros = () => {
                   <h3 className="text-2xl font-bold text-black">Misión</h3>
                 </div>
                 <p className="text-lg">
-                  Brindamos soluciones de transporte de carga seguras, rápidas y confiables a nivel local y nacional. Nos comprometemos con la satisfacción de nuestros clientes, proporcionando un servicio eficiente, personalizado y de alta calidad.
+                  Brindamos soluciones de transporte de carga seguras, rápidas y
+                  confiables a nivel local y nacional. Nos comprometemos con la
+                  satisfacción de nuestros clientes, proporcionando un servicio
+                  eficiente, personalizado y de alta calidad.
                 </p>
               </div>
-              
+
               <div className="bg-white p-8 rounded-xl shadow-lg">
                 <div className="flex items-center mb-6">
                   <Globe className="w-12 h-12 mr-4 text-[#FEC727]" />
                   <h3 className="text-2xl font-bold text-black">Visión</h3>
                 </div>
                 <p className="text-lg">
-                  Ser la empresa líder en transporte y logística a nivel local y nacional, reconocida por nuestra capacidad de adaptación, innovación constante y compromiso con la excelencia, contribuyendo al crecimiento de nuestros clientes.
+                  Ser la empresa líder en transporte y logística a nivel local y
+                  nacional, reconocida por nuestra capacidad de adaptación,
+                  innovación constante y compromiso con la excelencia,
+                  contribuyendo al crecimiento de nuestros clientes.
                 </p>
               </div>
             </div>
@@ -97,46 +126,54 @@ const Nosotros = () => {
           <h2 className="text-4xl font-bold text-center mb-16 text-black">
             Pilares de <span className="text-[#FEC727]">TRANSJER</span>
           </h2>
-          
+
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {[
               {
                 icon: <Shield className="w-10 h-10 text-[#FEC727]" />,
                 title: "Seguridad",
-                description: "Garantizamos el transporte seguro de su mercadería en todo momento"
+                description:
+                  "Garantizamos el transporte seguro de su mercadería en todo momento",
               },
               {
                 icon: <Truck className="w-10 h-10 text-[#FEC727]" />,
                 title: "Puntualidad",
-                description: "Entregas a tiempo con seguimiento en tiempo real"
+                description: "Entregas a tiempo con seguimiento en tiempo real",
               },
               {
                 icon: <Package className="w-10 h-10 text-[#FEC727]" />,
                 title: "Eficiencia",
-                description: "Procesos logísticos optimizados para máximo rendimiento"
+                description:
+                  "Procesos logísticos optimizados para máximo rendimiento",
               },
               {
                 icon: <Users className="w-10 h-10 text-[#FEC727]" />,
                 title: "Orientación al cliente",
-                description: "Soluciones personalizadas para cada necesidad"
+                description: "Soluciones personalizadas para cada necesidad",
               },
               {
                 icon: <Clock className="w-10 h-10 text-[#FEC727]" />,
                 title: "Disponibilidad",
-                description: "Servicio 24/7 para atender sus requerimientos"
+                description: "Servicio 24/7 para atender sus requerimientos",
               },
               {
                 icon: <MapPin className="w-10 h-10 text-[#FEC727]" />,
                 title: "Cobertura nacional",
-                description: "Llegamos a todo el territorio nacional con nuestra flota"
-              }
+                description:
+                  "Llegamos a todo el territorio nacional con nuestra flota",
+              },
             ].map((value, index) => (
-              <div key={index} className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#FEC727] hover:shadow-lg transition-all">
+              <div
+                key={index}
+                className="bg-gray-50 p-6 rounded-lg border-l-4 border-[#FEC727] hover:shadow-lg transition-all"
+              >
                 <div className="flex items-center mb-4">
                   <div className="p-2 rounded-full bg-gray-100 mr-4">
                     {value.icon}
                   </div>
-                  <h3 className="text-xl font-bold text-black">{value.title}</h3>
+                  <h3 className="text-xl font-bold text-black">
+                    {value.title}
+                  </h3>
                 </div>
                 <p className="text-gray-600">{value.description}</p>
               </div>
@@ -153,31 +190,44 @@ const Nosotros = () => {
             <p className="text-xl text-center mb-16 max-w-2xl mx-auto text-white">
               Profesionales con amplia experiencia en logística y transporte
             </p>
-            
-            <div className="grid md:grid-cols-2 gap-8">
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {[
                 {
-                  name: "Jeremy Torres",
-                  position: "Director General",
-                  bio: "Más de 15 años de experiencia en gestión logística y transporte de mercancías a nivel nacional.",
-                  image: "img/director-transporte.jpg"
+                  name: "Renato Melchor",
+                  position: "Asistente de Operaciones",
+                  bio: "Apoya en la coordinación diaria de procesos logísticos, asegurando el cumplimiento de tiempos y procedimientos.",
+                  image: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan", // reemplaza con la imagen real si la tienes
                 },
                 {
-                  name: "Andrea Mendoza",
-                  position: "Directora de Operaciones",
-                  bio: "Especialista en cadena de suministro con amplio conocimiento en distribución y rutas logísticas.",
-                  image: "img/directora-operaciones.jpg"
-                }
+                  name: "Julio Murga",
+                  position: "Coordinador de Operaciones",
+                  bio: "Encargado de supervisar las rutas y cargas, garantizando la eficiencia del servicio logístico en campo.",
+                  image: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan", // reemplaza con la imagen real si la tienes
+                },
+                {
+                  name: "Cielo Telles",
+                  position: "Ejecutiva Comercial",
+                  bio: "Gestiona relaciones con clientes y desarrolla nuevas oportunidades comerciales en el sector transporte.",
+                  image: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan", // reemplaza con la imagen real si la tienes
+                },
               ].map((member, index) => (
-                <div key={index} className="bg-white rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105">
-                  <img 
-                    src={member.image} 
-                    alt={member.name} 
+                <div
+                  key={index}
+                  className="bg-white rounded-xl overflow-hidden shadow-lg transition-transform hover:scale-105"
+                >
+                  <img
+                    src={member.image}
+                    alt={member.name}
                     className="w-full h-64 object-cover"
                   />
                   <div className="p-6">
-                    <h3 className="text-2xl font-bold mb-1 text-black">{member.name}</h3>
-                    <p className="text-lg mb-4 text-[#FEC727]">{member.position}</p>
+                    <h3 className="text-2xl font-bold mb-1 text-black">
+                      {member.name}
+                    </h3>
+                    <p className="text-lg mb-4 text-[#FEC727]">
+                      {member.position}
+                    </p>
                     <p className="text-gray-600">{member.bio}</p>
                   </div>
                 </div>
@@ -191,18 +241,30 @@ const Nosotros = () => {
           <h2 className="text-4xl font-bold text-center mb-16 text-black">
             Nuestros <span className="text-[#FEC727]">Reconocimientos</span>
           </h2>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
             {[
-              { img: "img/certificacion-transporte.jpg", alt: "Certificación en Transporte" },
-              { img: "img/certificado-calidad-logistica.jpg", alt: "Certificado de Calidad Logística" },
+              {
+                img: "img/certificacion-transporte.jpg",
+                alt: "Certificación en Transporte",
+              },
+              {
+                img: "img/certificado-calidad-logistica.jpg",
+                alt: "Certificado de Calidad Logística",
+              },
               { img: "img/flota-certificada.jpg", alt: "Flota Certificada" },
-              { img: "img/seguridad-vial.jpg", alt: "Certificación en Seguridad Vial" }
+              {
+                img: "img/seguridad-vial.jpg",
+                alt: "Certificación en Seguridad Vial",
+              },
             ].map((cert, index) => (
-              <div key={index} className="flex justify-center p-4 bg-gray-50 rounded-lg h-full border border-gray-200 hover:border-[#FEC727] transition-all">
-                <img 
-                  src={cert.img} 
-                  alt={cert.alt} 
+              <div
+                key={index}
+                className="flex justify-center p-4 bg-gray-50 rounded-lg h-full border border-gray-200 hover:border-[#FEC727] transition-all"
+              >
+                <img
+                  src={cert.img}
+                  alt={cert.alt}
                   className="h-20 object-contain grayscale hover:grayscale-0 transition-all"
                 />
               </div>
@@ -211,18 +273,25 @@ const Nosotros = () => {
         </div>
 
         {/* CTA Final */}
-        <div 
+        <div
           className="py-20 px-4 text-center"
-          style={{ backgroundColor: '#FEC727' }}
+          style={{ backgroundColor: "#FEC727" }}
         >
           <div className="max-w-4xl mx-auto">
-            <h2 className="text-4xl font-bold mb-6 text-black">¿Necesitas un servicio de transporte confiable?</h2>
+            <h2 className="text-4xl font-bold mb-6 text-black">
+              ¿Necesitas un servicio de transporte confiable?
+            </h2>
             <p className="text-xl mb-8 max-w-2xl mx-auto text-black">
               Contáctanos para una cotización personalizada sin compromiso
             </p>
-            <button 
+            <button
               className="px-8 py-4 bg-black text-white rounded-full font-bold flex items-center mx-auto hover:bg-gray-800 transition transform hover:scale-105"
-              onClick={() => window.open('https://api.whatsapp.com/send/?phone=51913177037&text=Hola%2C+estoy+interesado+en+los+servicios+de+transporte+de+TRANSJER.+%C2%BFPodr%C3%ADan+brindarme+m%C3%A1s+informaci%C3%B3n%3F&type=phone_number&app_absent=0', '_blank')}
+              onClick={() =>
+                window.open(
+                  "https://api.whatsapp.com/send/?phone=51913177037&text=Hola%2C+estoy+interesado+en+los+servicios+de+transporte+de+TRANSJER.+%C2%BFPodr%C3%ADan+brindarme+m%C3%A1s+informaci%C3%B3n%3F&type=phone_number&app_absent=0",
+                  "_blank"
+                )
+              }
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"

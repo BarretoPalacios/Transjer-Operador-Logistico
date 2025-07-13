@@ -10,6 +10,8 @@ import CoberturaNacional from "../components/CoberturaNacional";
 import ServicesCarousel from "../components/ServicesCarousel";
 import ContactSection from "../components/ContactSection";
 import HeroBanner from "../components/HeroBanner";
+import PeruMap from "../components/PeruMap";
+
 
 const Inicio = () => {
   return (
@@ -36,6 +38,8 @@ const Inicio = () => {
 
       {/* Contacto (sección idéntica al original) */}
       <ContactSection />
+
+      <Footer />
     </div>
   );
 };

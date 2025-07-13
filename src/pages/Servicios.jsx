@@ -56,7 +56,7 @@ const Servicios = () => {
               <ul className="space-y-4 mb-8">
                 <li className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-[#FEC727] mr-2 mt-1 flex-shrink-0" />
-                  <span>Vehículos desde 1 hasta 10 toneladas de capacidad</span>
+                  <span>Vehículos desde 2 hasta 15 toneladas de capacidad</span>
                 </li>
                 <li className="flex items-start">
                   <CheckCircle className="w-6 h-6 text-[#FEC727] mr-2 mt-1 flex-shrink-0" />
@@ -92,10 +92,10 @@ const Servicios = () => {
                 <div className="bg-[#FEC727] p-3 rounded-lg mr-4">
                   <Globe className="w-8 h-8 text-black" />
                 </div>
-                <h3 className="text-3xl font-bold">Transporte Nacional</h3>
+                <h3 className="text-3xl font-bold">Transporte Local y Nacional</h3>
               </div>
               <p className="text-lg mb-6">
-                Cobertura en las 25 regiones del Perú con diferentes modalidades según el tipo de carga y urgencia del servicio.
+                Cobertura en las 20 regiones del Perú con diferentes modalidades según el tipo de carga y urgencia del servicio.
               </p>
               <div className="grid md:grid-cols-2 gap-6 mb-8">
                 <div className="bg-gray-50 p-4 rounded-lg">
@@ -151,13 +151,7 @@ const Servicios = () => {
                       <p className="text-gray-600 text-sm">Para mercancías generales con sistema de rackeo</p>
                     </div>
                   </li>
-                  <li className="flex items-start">
-                    <div className="bg-black text-[#FEC727] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">2</div>
-                    <div>
-                      <p className="font-medium">Almacén refrigerado</p>
-                      <p className="text-gray-600 text-sm">Control de temperatura para productos perecibles</p>
-                    </div>
-                  </li>
+              
                   <li className="flex items-start">
                     <div className="bg-black text-[#FEC727] rounded-full w-6 h-6 flex items-center justify-center mr-3 mt-1 flex-shrink-0">3</div>
                     <div>

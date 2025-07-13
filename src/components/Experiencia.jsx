@@ -11,11 +11,11 @@ const Experiencia = () => {
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white">
-            <span className="text-[#FEC727]">+4 años</span> de experiencia en logística
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white italic">
+            CREANDO <span className="text-[#FEC727]"> EXPERIENCIA</span> , ENTREGANDO <span className="text-[#FEC727]">EXCELENCIA</span>
           </h2>
           <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            Transportando confianza y seguridad a través de todo el Perú
+            +4 AÑOS TRANSPORTANDO CONFIANZA Y SEGURIDAD A TRAVES DE TODO EL PERU.
           </p>
         </div>
 
@@ -41,7 +41,8 @@ const Experiencia = () => {
               <div>
                 <h3 className="text-2xl font-bold text-white mb-3">Flota moderna y equipada</h3>
                 <p className="text-gray-300">
-                  Más de 100 vehículos adaptados para todo tipo de carga, con tecnología de seguimiento GPS y mantenimiento preventivo constante.
+                  
+                   vehículos adaptados para todo tipo de carga, con tecnología de seguimiento GPS y mantenimiento preventivo constante.
                 </p>
               </div>
             </div>
@@ -63,9 +64,9 @@ const Experiencia = () => {
                 <MapPin className="w-8 h-8 text-black" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-3">Cobertura nacional</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Cobertura Local y Nacional</h3>
                 <p className="text-gray-300">
-                  Operaciones en las 25 regiones del Perú, con centros logísticos estratégicamente ubicados para mayor eficiencia.
+                  Operaciones en las 20 regiones del Perú, con centros logísticos estratégicamente ubicados para mayor eficiencia.
                 </p>
               </div>
             </div>
@@ -75,7 +76,7 @@ const Experiencia = () => {
                 <CheckCircle className="w-8 h-8 text-black" />
               </div>
               <div>
-                <h3 className="text-2xl font-bold text-white mb-3">+100 clientes satisfechos</h3>
+                <h3 className="text-2xl font-bold text-white mb-3">Clientes que confían en nosotros</h3>
                 <p className="text-gray-300">
                   Empresas de diversos sectores que confían en nuestra capacidad de entrega puntual y segura.
                 </p>
@@ -97,7 +98,7 @@ const Experiencia = () => {
               className="bg-[#FEC727] bg-opacity-50 backdrop-blur-sm p-6 rounded-xl border border-gray-700 hover:border-[#FEC727] transition-all text-center"
             >
               <div className="text-4xl mb-2 text-black">{item.icon}</div>
-              <p className="text-3xl font-bold text-black">{item.number}</p>
+              {/* <p className="text-3xl font-bold text-black">{item.number}</p> */}
               <p className="text-black">{item.label}</p>
             </div>
           ))}

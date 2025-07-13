@@ -1,6 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";
+import { useLocation } from "react-router-dom";
+
 import { Phone, X, Mail, MapPin, Clock } from "lucide-react";
 import Modal from "react-modal";
 
@@ -10,6 +12,17 @@ Modal.setAppElement('#root');
 function Navbar() {
   const [scrolled, setScrolled] = useState(false);
   const [modalIsOpen, setModalIsOpen] = useState(false);
+  const location = useLocation();
+  const currentPath = location.pathname;
+
+const getLinkClass = (path) =>
+  `relative px-4 py-2 rounded-full font-medium transition-colors ${
+    currentPath === path
+      ? "text-black after:content-[''] after:absolute after:-bottom-1 after:left-1/2 after:-translate-x-1/2 after:w-8 after:h-[2px] after:bg-black"
+      : "text-black hover:bg-[#FEC727] hover:text-black"
+  }`;
+
+
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,7 +56,8 @@ function Navbar() {
   return (
     <>
 {/* Barra superior de contactos - Fija en la parte superior */}
-<div className="fixed w-full top-0 z-40 bg-[#FEC727] text-black text-sm py-5 hidden md:block">
+{!scrolled && (
+  <div className="fixed w-full top-0 z-40 bg-[#FEC727] text-black text-sm py-5 hidden md:block">
   <div className="container mx-auto px-4">
     <div className="flex justify-between items-center">
       <div className="flex items-center space-x-4">
@@ -80,12 +94,13 @@ function Navbar() {
     </div>
   </div>
 </div>
+)}
 
       {/* Navbar principal - Posicionado debajo de la barra de contactos */}
       <header
         className={`fixed w-full z-50 transition-all duration-300 ${
           scrolled
-            ? "py-2 bg-white shadow-lg top-0"
+            ? "py-2 bg-white/20 backdrop-blur-sm shadow-lg top-0"
             : "py-4 bg-white md:top-15 top-0"  // Ajuste aquí: md:top-10 para dejar espacio a la barra de contactos
         }`}
       >
@@ -103,37 +118,39 @@ function Navbar() {
             <nav className="hidden md:flex items-center space-x-1 uppercase font-bolder">
               <Link
                 to="/"
-                className="px-4 py-2 rounded-full font-medium text-black hover:bg-[#FEC727] hover:text-black transition-colors"
+                className={getLinkClass("/")}
+        
               >
                 Inicio
               </Link>
               <Link
                 to="/servicios"
-                className="px-4 py-2 rounded-full font-medium text-black hover:bg-[#FEC727] hover:text-black transition-colors"
+                className={getLinkClass("/servicios")}
               >
                 Servicios
               </Link>
               <Link
                 to="/flotas"
-                className="px-4 py-2 rounded-full font-medium text-black hover:bg-[#FEC727] hover:text-black transition-colors"
+                className={getLinkClass("/flotas")}
               >
                 Flotas
               </Link>
               <Link
                 to="/nosotros"
-                className="px-4 py-2 rounded-full font-medium text-black hover:bg-[#FEC727] hover:text-black transition-colors"
+                className={getLinkClass("/nosotros")}
               >
                 Nosotros
               </Link>
               <Link
                 to="/contacto"
-                className="px-4 py-2 rounded-full font-medium text-black hover:bg-[#FEC727] hover:text-black transition-colors"
+                className={getLinkClass("/contacto")}
               >
                 Contacto
               </Link>
               <a
                 href="tel:913177037"
                 className="ml-4 px-6 py-2 bg-[#FEC727] text-black rounded-full font-semibold hover:bg-yellow-500 transition-colors flex items-center"
+              
               >
                 <Phone className="w-4 h-4 mr-2" />
               913177037
