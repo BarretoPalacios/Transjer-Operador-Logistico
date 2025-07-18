@@ -26,7 +26,7 @@ function Footer() {
               </div>
               <p className="text-gray-300 mb-6">
                 RUC:  20607981176 <br />
-RAZON SOCIAL: Transjer Operador Logistico S.a.C. 
+RAZON SOCIAL: Transjer Operador Logistico S.A.C. 
 
               </p>
               <div>
@@ -35,19 +35,19 @@ RAZON SOCIAL: Transjer Operador Logistico S.a.C.
                 </h4>
                 <div className="flex space-x-4">
                   <a
-                    href="#"
+                    href="https://www.facebook.com/profile.php?id=61573999940845"
                     className="text-gray-300 hover:text-[#FEC727] transition"
                   >
                     <Facebook className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.instagram.com/comercialtransjer/"
                     className="text-gray-300 hover:text-[#FEC727] transition"
                   >
                     <Instagram className="w-5 h-5" />
                   </a>
                   <a
-                    href="#"
+                    href="https://www.linkedin.com/in/transjer-operador-log%C3%ADstico-4071a6351/?fbclid=IwY2xjawLa_3NleHRuA2FlbQIxMABicmlkETFKZFNmNDhXQWFNaGRYTk9jAR7X5gB6jgRb5p_4vS1p-JKljR3R1U_IemT4byDoNJHk_oB5lnyBxMkalKlNpA_aem_sJpdKRSaohJXz5PF-ZS3yA"
                     className="text-gray-300 hover:text-[#FEC727] transition"
                   >
                     <Linkedin className="w-5 h-5" />

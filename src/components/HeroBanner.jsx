@@ -1,20 +1,16 @@
-import {
-  Truck,
-  ArrowRight,
-  ChevronsDown,
-  MapPin,
-  Shield,
-  Clock,
-} from "lucide-react";
+import { ArrowRight, ChevronsDown } from "lucide-react";
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 
 const HeroBanner = () => {
   const [currentImage, setCurrentImage] = useState(0);
 
   const backgrounds = [
-    "url('/img/flota-1.jpg')",
-    "url('/img/flota-2.jpg')",
-    "url('/img/flota-3.jpg')",
+    "img/flotas/c_1-5/IMG_5660.JPG",
+    "img/flotas/c_1-5/IMG_5665.JPG",
+    "img/flotas/c_1-5/IMG_5676.JPG",
+    "img/flotas/c_1-5/IMG_5672.JPG",
+    "img/flotas/c_1-5/IMG_5651.JPG"
   ];
 
   useEffect(() => {
@@ -25,159 +21,55 @@ const HeroBanner = () => {
   }, []);
 
   return (
-    <section className="relative h-screen min-h-[800px] flex items-center overflow-hidden">
-      {/* Fondo dinámico con transición */}
-      <div className="absolute inset-0 transition-opacity duration-1000 ease-in-out">
+    <section className="relative h-screen min-h-[800px] flex overflow-hidden">
+      {/* Fondo dinámico con overlay oscuro para mejor contraste */}
+      <div className="absolute inset-0">
         {backgrounds.map((bg, index) => (
           <div
             key={index}
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
-            style={{ backgroundImage: bg }}
+            style={{ backgroundImage: `url(${bg})` }}
           />
         ))}
-        {/* <div className="absolute inset-0 bg-black opacity-10"></div> */}
+  
+      </div>
+{/* Contenedor en forma de "D" */}
+<div className="bg-[#FEC727] relative z-10 h-1/3 md:h-full w-full md:w-1/2 lg:w-1/3 flex flex-col rounded-br-full rounded-bl-full md:rounded-bl-[0px] md:rounded-tr-full md:rounded-br-full flex items-center justify-center p-4 border border-white border-[10px]">
+
+  <div className=" flex flex-col items-center md:items-start w-full max-w-xs md:max-w-md">
+    <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-black mb-2">
+      TRANSJER
+    </h1>
+    <p className="text-center md:text-left text-base sm:text-lg md:text-xl text-black mb-4 px-2 sm:px-0">
+      CREANDO EXPERIENCIA , ENTREGANDO EXCELENCIA
+    </p>
+    
+    <div className="flex flex-col gap-2  w-auto">
+      <Link
+  to="/contacto"
+  className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-black text-white font-bold rounded-full hover:bg-gray-900 transition-all shadow-lg text-sm sm:text-base"
+>
+  Cotizar Ahora <ArrowRight className="ml-2" />
+</Link>
+
+<Link
+  to="/servicios"
+  className="inline-flex items-center justify-center px-4 sm:px-6 py-2 sm:py-3 bg-white text-black font-bold rounded-full hover:bg-gray-100 transition-all shadow-lg text-sm sm:text-base"
+>
+  Ver Servicios
+</Link>
+    </div>
+  </div>
+
+</div>
+
+      {/* Indicador de scroll */}
+      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce z-30">
+        <ChevronsDown className="text-white w-10 h-10 drop-shadow-lg" />
       </div>
 
-      {/* Efecto de partículas (simulado con CSS) */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute rounded-full bg-[#FEC727] opacity-20 animate-float"
-            style={{
-              width: `${Math.random() * 10 + 5}px`,
-              height: `${Math.random() * 10 + 5}px`,
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDuration: `${Math.random() * 20 + 10}s`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
-
-      {/* Contenido principal */}
-      <div className="relative z-10 container mx-auto px-6 lg:px-8 text-center">
-        {/* Logo/Texto animado */}
-        <div className="mb-8 animate-fade-in-down text-center">
-          <h1
-            className="text-6xl md:text-7xl lg:text-8xl font-bold mb-6 
-               bg-gradient-to-r from-[#FEC727] to-white text-transparent bg-clip-text 
-               drop-shadow-[6px_6px_0px_rgba(0,0,0,0.8)] 
-               animate-title-pop"
-          >
-            TRANSJER
-          </h1>
-
-          <div className="w-24 h-1 bg-[#FEC727] mx-auto mb-6"></div>
-
-          <p className="text-xl md:text-2xl text-white max-w-3xl mx-auto drop-shadow-lg">
-            DETRÁS DE CADA CARGA, HAY UNA HISTORIA QUE ENTREGAMOS CON ORGULLO
-          </p>
-        </div>
-
-        {/* CTA Principal */}
-        <div className="flex flex-col sm:flex-row justify-center gap-4 mb-16">
-          <a
-            href="/contacto"
-            className="px-8 py-4 bg-[#FEC727] hover:bg-[#FEC727]/70 text-black font-bold rounded-full flex items-center justify-center transition-transform hover:scale-105 shadow-lg"
-          >
-            Solicitar Cotización <ArrowRight className="ml-2" />
-          </a>
-          <a
-            href="/servicios"
-            className="px-8 py-4 bg-transparent border-2 border-white hover:border-yellow-400 text-white hover:text-yellow-400 font-bold rounded-full flex items-center justify-center transition-all"
-          >
-            Ver Servicios
-          </a>
-        </div>
-
-        {/* Tarjetas flotantes */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 max-w-5xl mx-auto">
-          {[
-            {
-              icon: <Truck size={40} className="text-yellow-400 mx-auto" />,
-              text: "Flota Moderna",
-            },
-            {
-              icon: <Shield size={40} className="text-yellow-400 mx-auto" />,
-              text: "Carga Protegida",
-            },
-            {
-              icon: <MapPin size={40} className="text-yellow-400 mx-auto" />,
-              text: "Cobertura Nacional",
-            },
-            {
-              icon: <Clock size={40} className="text-yellow-400 mx-auto" />,
-              text: "Entregas Puntuales",
-            },
-          ].map((item, index) => (
-            <div
-              key={index}
-              className="bg-black bg-opacity-60 backdrop-blur-sm p-4 rounded-lg border border-yellow-400 border-opacity-30 hover:border-opacity-100 transition-all hover:transform hover:-translate-y-2 shadow-lg"
-            >
-              {item.icon}
-              <p className="mt-2 text-white font-medium">{item.text}</p>
-            </div>
-          ))}
-        </div>
-
-        {/* Scroll indicator */}
-        <div className="animate-bounce absolute bottom-10 left-1/2 transform -translate-x-1/2">
-          <ChevronsDown className="text-yellow-400 w-10 h-10" />
-        </div>
-
-        {/* Efecto de camión animado */}
-        <div className="absolute bottom-0 left-0 w-full overflow-hidden">
-          <div className="animate-truck absolute -left-64 bottom-0">
-            <Truck className="text-yellow-400 w-32 h-32 opacity-80" />
-          </div>
-        </div>
-      </div>
-
-      {/* Estilos de animación */}
-      <style jsx>{`
-        @keyframes float {
-          0% {
-            transform: translateY(0) translateX(0);
-          }
-          50% {
-            transform: translateY(-100px) translateX(20px);
-          }
-          100% {
-            transform: translateY(0) translateX(0);
-          }
-        }
-        @keyframes truck {
-          0% {
-            transform: translateX(-100%);
-          }
-          100% {
-            transform: translateX(calc(100vw + 100px));
-          }
-        }
-        .animate-float {
-          animation: float linear infinite;
-        }
-        .animate-truck {
-          animation: truck 20s linear infinite;
-        }
-        .animate-fade-in-down {
-          animation: fadeInDown 1.5s ease-out forwards;
-        }
-        @keyframes fadeInDown {
-          0% {
-            opacity: 0;
-            transform: translateY(-50px);
-          }
-          100% {
-            opacity: 1;
-            transform: translateY(0);
-          }
-        }
-      `}</style>
     </section>
   );
 };

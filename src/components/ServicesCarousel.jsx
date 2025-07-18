@@ -21,7 +21,7 @@ const ServicesCarousel = () => {
       title: "Transporte Local",
       description:
         "Servicio de transporte urbano y metropolitano para distribución eficiente dentro de la ciudad con vehículos de 1 a 10 toneladas.",
-      image: "img/flota-1.jpg",
+      image: "img/flotas/c_1-5/IMG_5665.JPG",
       icon: <Truck className="w-8 h-8 text-black" />,
     },
     {
@@ -29,7 +29,7 @@ const ServicesCarousel = () => {
       title: "Transporte Nacional",
       description:
         "Cobertura en las 25 regiones del Perú con diferentes modalidades según el tipo de carga y urgencia del servicio.",
-      image: "img/flota-2.jpg",
+      image: "img/flotas/c_15/IMG_5674.JPG",
       icon: <Globe className="w-8 h-8 text-black" />,
     },
     {
@@ -37,7 +37,7 @@ const ServicesCarousel = () => {
       title: "Mudanzas",
       description:
         "Servicio de mudanzas a nivel local y nacional, ideal para hogares y oficinas. Contamos con personal capacitado, embalaje seguro y vehículos adecuados para cada necesidad.",
-      image: "img/flota-2.jpg",
+      image: "img/flotas/c_1-5/IMG_5658.JPG",
       icon: <House className="w-8 h-8 text-black" />,
     },
     {
@@ -53,7 +53,7 @@ const ServicesCarousel = () => {
       title: "Distribución",
       description:
         "Servicio completo de distribución desde nuestros almacenes o directamente desde tus proveedores con seguimiento GPS.",
-      image: "img/flota-3.jpg",
+      image: "img/flotas/c_7t/IMG_5669.JPG",
       icon: <Package className="w-8 h-8 text-black" />,
     },
     {
@@ -61,7 +61,7 @@ const ServicesCarousel = () => {
       title: "Transporte Express",
       description:
         "Entrega urgente en 24 horas para cargas prioritarias en rutas principales con vehículos dedicados.",
-      image: "img/flota-4.jpg",
+      image: "img/flotas/c_5t_gaviota/IMG_5650.JPG",
       icon: <Clock className="w-8 h-8 text-black" />,
     },
     {
@@ -69,7 +69,7 @@ const ServicesCarousel = () => {
       title: "Last Mile Delivery",
       description:
         "Solución completa para la última milla con vehículos menores y personal capacitado para entregas finales.",
-      image: "img/flota-5.jpg",
+      image: "img/flotas/c_5t_gaviota/IMG_5670.JPG",
       icon: <MapPin className="w-8 h-8 text-black" />,
     },
   ];

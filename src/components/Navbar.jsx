@@ -69,7 +69,7 @@ const getLinkClass = (path) =>
           <Mail className="w-4 h-4 mr-1" />
           <span>comercial@transjer.com</span>
         </a>
-      </div>
+      </div> 
       <div className="flex items-center space-x-4">
         <div className="flex items-center space-x-3">
           <a href="https://www.facebook.com/profile.php?id=61573999940845" target="_blank" rel="noopener noreferrer" className="hover:text-black">
@@ -84,7 +84,7 @@ const getLinkClass = (path) =>
         </div>
         <div className="flex items-center">
           <MapPin className="w-4 h-4 mr-1" />
-          <span>Av. Ejemplo 123, Lima</span>
+          <span>Gerardo Unger 3601 – Edificio Albamar, Dpto1801.</span>
         </div>
         <div className="flex items-center">
           <Clock className="w-4 h-4 mr-1" />

@@ -28,7 +28,7 @@ const CoberturaNacional = () => {
 ];
 
   return (
-    <section className="py-20 bg-gradient-to-b from-black to-[#FEC727] relative overflow-hidden">
+    <section className="py-20 bg-gradient-to-r from-black to-[#FEC727] relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#FEC727] filter blur-3xl"></div>

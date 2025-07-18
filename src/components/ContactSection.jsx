@@ -8,7 +8,7 @@ const ContactSection = () => {
       {/* Imagen de fondo con overlay oscuro */}
       <div className="absolute inset-0 overflow-hidden">
         <img
-          src="/img/flota-6.jpg"
+          src="img/flotas/c_5t_gaviota/IMG_5670.JPG"
           alt="Camiones de transporte"
           className="w-full h-full object-cover"
         />

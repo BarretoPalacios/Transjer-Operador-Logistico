@@ -75,7 +75,7 @@ const Nosotros = () => {
     </div>
     <div className="md:w-1/2">
       <img
-        src="img/equipo-transjer.jpg"
+        src="img/flotas/equipo/IMG_5525.JPG"
         alt="Equipo TRANSJER"
         className="rounded-xl shadow-2xl w-full h-auto"
       />
@@ -197,19 +197,19 @@ const Nosotros = () => {
                   name: "Renato Melchor",
                   position: "Asistente de Operaciones",
                   bio: "Apoya en la coordinación diaria de procesos logísticos, asegurando el cumplimiento de tiempos y procedimientos.",
-                  image: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan", // reemplaza con la imagen real si la tienes
+                  image: "img/flotas/equipo/C2213544-2BA3-4D0E-8B73-D2F85FA2C7DD.JPG", // reemplaza con la imagen real si la tienes
                 },
                 {
                   name: "Julio Murga",
                   position: "Coordinador de Operaciones",
                   bio: "Encargado de supervisar las rutas y cargas, garantizando la eficiencia del servicio logístico en campo.",
-                  image: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan", // reemplaza con la imagen real si la tienes
+                  image: "img/flotas/equipo/IMG_5525.JPG", // reemplaza con la imagen real si la tienes
                 },
                 {
                   name: "Cielo Telles",
                   position: "Ejecutiva Comercial",
                   bio: "Gestiona relaciones con clientes y desarrolla nuevas oportunidades comerciales en el sector transporte.",
-                  image: "https://api.dicebear.com/9.x/adventurer-neutral/svg?seed=Ryan", // reemplaza con la imagen real si la tienes
+                  image: "img/flotas/equipo/IMG_5575.JPG", // reemplaza con la imagen real si la tienes
                 },
               ].map((member, index) => (
                 <div
@@ -236,41 +236,7 @@ const Nosotros = () => {
           </div>
         </div>
 
-        {/* Certificaciones */}
-        <div className="max-w-6xl mx-auto py-20 px-4">
-          <h2 className="text-4xl font-bold text-center mb-16 text-black">
-            Nuestros <span className="text-[#FEC727]">Reconocimientos</span>
-          </h2>
-
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
-            {[
-              {
-                img: "img/certificacion-transporte.jpg",
-                alt: "Certificación en Transporte",
-              },
-              {
-                img: "img/certificado-calidad-logistica.jpg",
-                alt: "Certificado de Calidad Logística",
-              },
-              { img: "img/flota-certificada.jpg", alt: "Flota Certificada" },
-              {
-                img: "img/seguridad-vial.jpg",
-                alt: "Certificación en Seguridad Vial",
-              },
-            ].map((cert, index) => (
-              <div
-                key={index}
-                className="flex justify-center p-4 bg-gray-50 rounded-lg h-full border border-gray-200 hover:border-[#FEC727] transition-all"
-              >
-                <img
-                  src={cert.img}
-                  alt={cert.alt}
-                  className="h-20 object-contain grayscale hover:grayscale-0 transition-all"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
+    
 
         {/* CTA Final */}
         <div

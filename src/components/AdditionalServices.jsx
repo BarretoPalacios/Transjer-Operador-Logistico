@@ -2,7 +2,7 @@ import { Phone, ShieldCheck, Clock, Truck, Award, Quote } from "lucide-react";
 
 const AdditionalServices = () => {
   return (
-    <div className="w-full bg-black text-white py-16 px-4 md:px-8">
+    <div className="w-full bg-gradient-to-r from-black to-[#FEC727] text-white py-16 px-4 md:px-8">
       {/* Sección de diferenciales */}
       <div className="max-w-6xl mx-auto mb-20">
         <h2

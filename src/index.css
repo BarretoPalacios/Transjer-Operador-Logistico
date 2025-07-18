@@ -24,3 +24,18 @@ html {
 .animate-title-pop {
   animation: title-pop 0.6s ease-out forwards;
 }
+
+.slider-enter {
+          opacity: 0;
+        }
+        .slider-enter-active {
+          opacity: 1;
+          transition: opacity 1000ms;
+        }
+        .slider-exit {
+          opacity: 1;
+        }
+        .slider-exit-active {
+          opacity: 0;
+          transition: opacity 1000ms;
+        }

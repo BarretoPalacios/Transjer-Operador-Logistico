@@ -15,7 +15,7 @@ import PeruMap from "../components/PeruMap";
 
 const Inicio = () => {
   return (
-    <div className="bg-white">
+    <div className="">
       <WhatsAppButton />
 
       {/* Navbar Mejorado */}
