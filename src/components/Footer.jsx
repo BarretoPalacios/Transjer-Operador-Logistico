@@ -22,7 +22,7 @@ function Footer() {
             {/* Columna 1 - Información de la empresa */}
             <div>
               <div className="bg-white w-fit p-2 rounded-sm mb-4">
-                <img src="/img/logo-transjer.png" alt="logo de transjer"  className='w-20 '/>
+                <img src="/img/logo-transjer.png" alt="logo de transjer" lazyLoad="lazy"  className='w-20 '/>
               </div>
               <p className="text-gray-300 mb-6">
                 RUC:  20607981176 <br />

@@ -1,19 +1,22 @@
-import React from 'react'
+import React, { useState } from 'react';
 import { Truck, Send, CheckCircle } from "lucide-react";
-import { useEffect, useState } from "react";
 
 function Forms() {
     const [isFormSubmitted, setIsFormSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
+    // FormSubmit manejará el envío, pero mantenemos el estado local para UI
     const handleSubmit = (e) => {
-        e.preventDefault();
-        setIsFormSubmitted(true);
-        setTimeout(() => setIsFormSubmitted(false), 3000);
-        e.target.reset();
+        setIsLoading(true);
+        setTimeout(() => {
+            setIsFormSubmitted(true);
+            setIsLoading(false);
+            setTimeout(() => setIsFormSubmitted(false), 5000);
+        }, 1500); // Simulamos delay para mejor UX
     };
 
     return (
-        <div className="bg-white p-8 rounded-xl shadow-2xl border-2 border-yellow-500">
+        <div className="bg-white p-6 md:p-8 rounded-xl shadow-2xl border-2 border-yellow-500 max-w-md mx-auto">
             <div className="flex justify-center mb-4">
                 <Truck className="w-10 h-10 text-yellow-500" />
             </div>
@@ -31,10 +34,26 @@ function Forms() {
                     <p>Nuestro equipo de logística se contactará contigo pronto.</p>
                 </div>
             ) : (
-                <form onSubmit={handleSubmit} className="space-y-4">
+                <form 
+                    onSubmit={handleSubmit}
+                    action={`https://formsubmit.co/${encodeURIComponent('comercial@transjer.com')}`} 
+                    method="POST"
+                    className="space-y-4"
+                >
+                    {/* Campo oculto para el asunto del correo */}
+                    <input type="hidden" name="_subject" value="Nueva solicitud de cotización" />
+                    
+                    {/* Campo para redirección después del envío (opcional) */}
+                    <input type="hidden" name="_next" value="https://transjer.com.pe" />
+                    
+                    {/* Evita bots (opcional) */}
+                    <input type="text" name="_honey" className="hidden" />
+                    
+                    {/* Campos del formulario */}
                     <div>
                         <input
                             type="text"
+                            name="Nombre y Apellido"
                             placeholder="Nombre y Apellido*"
                             className="bg-gray-50 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition"
                             required
@@ -43,6 +62,7 @@ function Forms() {
                     <div>
                         <input
                             type="tel"
+                            name="Teléfono"
                             placeholder="Teléfono*"
                             className="bg-gray-50 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition"
                             required
@@ -51,6 +71,7 @@ function Forms() {
                     <div>
                         <input
                             type="email"
+                            name="Email"
                             placeholder="Email*"
                             className="bg-gray-50 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition"
                             required
@@ -58,19 +79,21 @@ function Forms() {
                     </div>
                     <div>
                         <select
+                            name="Tipo de servicio"
                             className="bg-gray-50 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition text-gray-700"
                             required
                         >
                             <option value="">Tipo de servicio*</option>
-                            <option value="transporte">Transporte de carga</option>
-                            <option value="distribucion">Distribución local</option>
-                            <option value="nacional">Transporte nacional</option>
-                            <option value="almacenaje">Almacenaje</option>
-                            <option value="otros">Otros servicios</option>
+                            <option value="Transporte de carga">Transporte de carga</option>
+                            <option value="Distribución local">Distribución local</option>
+                            <option value="Transporte nacional">Transporte nacional</option>
+                            <option value="Almacenaje">Almacenaje</option>
+                            <option value="Otros servicios">Otros servicios</option>
                         </select>
                     </div>
                     <div>
                         <textarea
+                            name="Detalles"
                             placeholder="Detalles de tu requerimiento*"
                             rows={3}
                             className="bg-gray-50 w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-yellow-500 focus:border-yellow-500 outline-none transition"
@@ -81,6 +104,7 @@ function Forms() {
                         <input
                             type="checkbox"
                             id="terms"
+                            name="Acepta políticas"
                             className="mt-1 w-4 h-4 text-yellow-600 border-gray-300 rounded focus:ring-yellow-500"
                             required
                         />
@@ -93,15 +117,22 @@ function Forms() {
                     </div>
                     <button
                         type="submit"
-                        className="w-full py-3 bg-black hover:bg-gray-800 text-yellow-500 font-bold rounded-lg transition flex items-center justify-center border-2 border-yellow-500 hover:text-white hover:border-black"
+                        disabled={isLoading}
+                        className="w-full py-3 bg-black hover:bg-gray-800 text-yellow-500 font-bold rounded-lg transition flex items-center justify-center border-2 border-yellow-500 hover:text-white hover:border-black disabled:opacity-70 disabled:cursor-not-allowed"
                     >
-                        <Send className="w-5 h-5 mr-2" />
-                        Enviar solicitud
+                        {isLoading ? (
+                            'Enviando...'
+                        ) : (
+                            <>
+                                <Send className="w-5 h-5 mr-2" />
+                                Enviar solicitud
+                            </>
+                        )}
                     </button>
                 </form>
             )}
         </div>
-    )
+    );
 }
 
-export default Forms
+export default Forms;

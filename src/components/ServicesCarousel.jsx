@@ -45,7 +45,7 @@ const ServicesCarousel = () => {
       title: "Almacenamiento",
       description:
         "Centros logísticos estratégicamente ubicados con almacenes convencionales, refrigerados y de máxima seguridad.",
-      image: "img/almacenamiento.jpg",
+      image: "img/flotas/c_7t/IMG_5668.JPG",
       icon: <Warehouse className="w-8 h-8 text-black" />,
     },
     {
@@ -111,7 +111,7 @@ const ServicesCarousel = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-black overflow-hidden relative">
+    <section id="services" className="py-10 md:py-20 bg-black overflow-hidden relative">
       {/* Elementos decorativos */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#FEC727] filter blur-3xl"></div>
@@ -120,14 +120,14 @@ const ServicesCarousel = () => {
 
       <div className="container mx-auto px-4 relative z-10">
         <div className="text-center mb-12">
-          <div className="inline-flex items-center justify-center bg-[#FEC727] bg-opacity-20 px-6 py-3 rounded-full mb-6">
+          <div className="inline-flex items-center justify-center bg-[#FEC727] bg-opacity-20 p-2 md:px-6 md:py-3 rounded-full mb-3 md:mb-6">
             <Truck className="w-6 h-6 mr-2 text-black" />
             <span className="font-medium text-black">NUESTROS SERVICIOS</span>
           </div>
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+          <h2 className="text-xl md:text-3xl md:text-4xl font-bold mb-4 text-white">
             Soluciones Logísticas Integrales
           </h2>
-          <p className="text-lg text-gray-300 max-w-3xl mx-auto">
+          <p className="text-xs  md:text-lg text-gray-300 max-w-3xl mx-auto">
             Servicios de transporte y distribución diseñados para optimizar tu
             cadena de suministro
           </p>
@@ -185,6 +185,7 @@ const ServicesCarousel = () => {
                     <div className="relative h-[250px] overflow-hidden">
                       <img
                         src={service.image}
+                        lazyLoad="lazy"
                         alt={service.title}
                         className={`w-full h-full object-cover transition-transform duration-500 ${
                           position === "center" ? "hover:scale-105" : ""

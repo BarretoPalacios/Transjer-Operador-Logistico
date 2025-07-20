@@ -38,7 +38,7 @@ const Experiencia = () => {
   };
 
   return (
-    <section className="py-20 bg-gradient-to-r from-black to-[#FEC727] relative overflow-hidden">
+    <section className="pt-10 md:pt-20 bg-gradient-to-r from-black to-[#FEC727] relative overflow-hidden">
       {/* Elementos decorativos */}
       <div className="absolute top-0 left-0 w-full h-full opacity-10">
         <div className="absolute top-20 left-10 w-40 h-40 rounded-full bg-[#FEC727] filter blur-3xl"></div>
@@ -47,13 +47,12 @@ const Experiencia = () => {
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-white italic">
-            CREANDO <span className="text-[#FEC727]"> EXPERIENCIA</span> ,
-            ENTREGANDO <span className="text-[#FEC727]">EXCELENCIA</span>
+          <h2 className="text-2xl md:text-5xl font-bold mb-6 text-white italic">
+            Creando <span className="text-[#FEC727]"> Experiencia</span> ,
+            Entregando <span className="text-[#FEC727]">Excelencia</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
-            +4 AÑOS TRANSPORTANDO CONFIANZA Y SEGURIDAD A TRAVES DE TODO EL
-            PERU.
+          <p className="text-xl text-white max-w-3xl mx-auto">
+            +4 años transportando confianza y seguridad a traves de todo el peru.
           </p>
         </div>
 
@@ -75,6 +74,7 @@ const Experiencia = () => {
                   >
                     <img
                       src={img}
+                      lazyLoad="lazy"
                       alt={`Flota de TRANSJER ${index + 1}`}
                       className="w-full h-full object-cover transform group-hover:scale-105 transition duration-500"
                     />
@@ -108,10 +108,10 @@ const Experiencia = () => {
                   <Truck className="w-8 h-8 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Flota moderna y equipada
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-white text-sm">
                     vehículos adaptados para todo tipo de carga, con tecnología
                     de seguimiento GPS y mantenimiento preventivo constante.
                   </p>
@@ -123,10 +123,10 @@ const Experiencia = () => {
                   <Calendar className="w-8 h-8 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     4 años de trayectoria
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-white text-sm">
                     Desde 2021 brindando soluciones logísticas confiables,
                     acumulando experiencia y perfeccionando nuestros procesos.
                   </p>
@@ -138,10 +138,10 @@ const Experiencia = () => {
                   <MapPin className="w-8 h-8 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Cobertura Local y Nacional
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-white text-sm">
                     Operaciones en las 20 regiones del Perú, con centros
                     logísticos estratégicamente ubicados para mayor eficiencia.
                   </p>
@@ -153,10 +153,10 @@ const Experiencia = () => {
                   <CheckCircle className="w-8 h-8 text-black" />
                 </div>
                 <div>
-                  <h3 className="text-2xl font-bold text-white mb-3">
+                  <h3 className="text-xl font-bold text-white mb-3">
                     Clientes que confían en nosotros
                   </h3>
-                  <p className="text-gray-300">
+                  <p className="text-white text-sm">
                     Empresas de diversos sectores que confían en nuestra
                     capacidad de entrega puntual y segura.
                   </p>
@@ -167,7 +167,7 @@ const Experiencia = () => {
         </div>
 
         {/* Logros destacados (igual que antes) */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
+        <div className="hidden md:grid grid-cols-2 md:grid-cols-4 gap-6 mt-20">
           {[
             { number: '4+', label: 'Años de experiencia', icon: '🏆' },
             { number: '14+', label: 'Vehículos', icon: '🚛' },

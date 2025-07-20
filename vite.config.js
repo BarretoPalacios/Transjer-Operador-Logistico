@@ -7,7 +7,7 @@ export default defineConfig({
   plugins: [react(),tailwindcss(),],
   server: {
     allowedHosts: [
-      'vehicle-entrance-ignored-instance.trycloudflare.com',
+      'ne-ultimate-streets-activists.trycloudflare.com',
       'localhost' // Mantén los hosts existentes
     ]
   }

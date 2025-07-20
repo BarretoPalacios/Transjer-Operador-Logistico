@@ -197,13 +197,13 @@ const Nosotros = () => {
                   name: "Renato Melchor",
                   position: "Asistente de Operaciones",
                   bio: "Apoya en la coordinación diaria de procesos logísticos, asegurando el cumplimiento de tiempos y procedimientos.",
-                  image: "img/flotas/equipo/C2213544-2BA3-4D0E-8B73-D2F85FA2C7DD.JPG", // reemplaza con la imagen real si la tienes
+                  image: "img/flotas/equipo/image.png", // reemplaza con la imagen real si la tienes
                 },
                 {
                   name: "Julio Murga",
                   position: "Coordinador de Operaciones",
                   bio: "Encargado de supervisar las rutas y cargas, garantizando la eficiencia del servicio logístico en campo.",
-                  image: "img/flotas/equipo/IMG_5525.JPG", // reemplaza con la imagen real si la tienes
+                  image: "img/flotas/equipo/C2213544-2BA3-4D0E-8B73-D2F85FA2C7DD.JPG", // reemplaza con la imagen real si la tienes
                 },
                 {
                   name: "Cielo Telles",

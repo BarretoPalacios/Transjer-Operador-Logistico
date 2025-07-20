@@ -169,7 +169,7 @@ const Servicios = () => {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center mb-28">
             <div className="order-1 lg:order-1">
               <img
-                src="img/almacenamiento.jpg"
+                src="img/flotas/c_7t/IMG_5668.JPG"
                 alt="Servicios de Almacenamiento"
                 className="rounded-xl shadow-2xl w-full h-auto object-cover"
               />
@@ -336,21 +336,21 @@ const Servicios = () => {
                   icon: <Warehouse className="w-10 h-10 text-[#FEC727]" />,
                   description:
                     "Control y administración de stock con reportes periódicos",
-                  image: "img/flotas/c_1-5/IMG_5660.JPG",
+                  image: "img/flotas/c_15/IMG_5674.JPG",
                 },
                 {
                   title: "Embalaje Especializado",
                   icon: <Shield className="w-10 h-10 text-[#FEC727]" />,
                   description:
                     "Preparación de carga con materiales y técnicas profesionales",
-                  image: "img/flotas/c_1-5/IMG_5661.JPG",
+                  image: "img/flotas/c_7t/IMG_5669.JPG",
                 },
                 {
                   title: "Servicio Personalizado",
                   icon: <Headphones className="w-10 h-10 text-[#FEC727]" />,
                   description:
                     "Soluciones a medida según requerimientos específicos de cada cliente",
-                  image: "img/flotas/c_1-5/IMG_5662.JPG",
+                  image: "img/flotas/c_5t_gaviota/IMG_5650.JPG",
                 },
               ].map((service, index) => (
                 <div

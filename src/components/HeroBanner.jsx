@@ -27,6 +27,7 @@ const HeroBanner = () => {
         {backgrounds.map((bg, index) => (
           <div
             key={index}
+            lazyLoad="lazy"
             className={`absolute inset-0 bg-cover bg-center transition-opacity duration-1000 ${
               index === currentImage ? "opacity-100" : "opacity-0"
             }`}
