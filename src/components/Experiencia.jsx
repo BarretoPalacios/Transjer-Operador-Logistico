@@ -52,7 +52,7 @@ const Experiencia = () => {
             Entregando <span className="text-[#FEC727]">Excelencia</span>
           </h2>
           <p className="text-xl text-white max-w-3xl mx-auto">
-            +4 años transportando confianza y seguridad a traves de todo el peru.
+            +4 años transportando confianza y seguridad a traves de todo el Perú.
           </p>
         </div>
 
@@ -112,7 +112,7 @@ const Experiencia = () => {
                     Flota moderna y equipada
                   </h3>
                   <p className="text-white text-sm">
-                    vehículos adaptados para todo tipo de carga, con tecnología
+                    Vehículos adaptados para todo tipo de carga, con tecnología
                     de seguimiento GPS y mantenimiento preventivo constante.
                   </p>
                 </div>

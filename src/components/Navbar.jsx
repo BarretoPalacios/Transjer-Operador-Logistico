@@ -84,7 +84,7 @@ const getLinkClass = (path) =>
         </div>
         <div className="flex items-center">
           <MapPin className="w-4 h-4 mr-1" />
-          <span>Gerardo Unger 3601 – Edificio Albamar, Dpto1801.</span>
+          <span>Gerardo Unger 3601 – Independencia. </span>
         </div>
         <div className="flex items-center">
           <Clock className="w-4 h-4 mr-1" />
