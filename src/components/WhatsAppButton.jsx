@@ -83,7 +83,7 @@ const WhatsAppButton = () => {
         
         // Redirigir después de mostrar la respuesta
         setTimeout(() => openWhatsApp(userMessage.text), 1500);
-      }, 2000);
+      }, 500);
     }
   };
 

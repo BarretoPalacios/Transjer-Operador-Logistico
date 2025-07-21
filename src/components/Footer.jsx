@@ -88,7 +88,7 @@ RAZON SOCIAL: Transjer Operador Logistico S.A.C.
                 </li>
                 <li>
                   <a
-                    href="/flota"
+                    href="/flotas"
                     className="text-gray-300 hover:text-[#FEC727] transition flex items-center"
                   >
                     <Truck className="w-4 h-4 mr-2" /> Nuestra Flota
