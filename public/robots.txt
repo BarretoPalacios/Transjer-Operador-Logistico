@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://transjer.com.pe/sitemap.xml
