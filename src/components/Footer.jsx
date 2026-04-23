@@ -188,7 +188,7 @@ RAZON SOCIAL: Transjer Operador Logistico S.A.C.
                 </li>
                 <li className="flex items-start">
                   <MapPin className="w-5 h-5 text-[#FEC727] mr-3 mt-1 flex-shrink-0" />
-                  <span className="text-gray-300">Av. Industrial 123, Lima, Perú</span>
+                  <span className="text-gray-300">Gerardo Unger 3601 – Independencia.</span>
                 </li>
                 <li className="flex items-start">
                   <Clock className="w-5 h-5 text-[#FEC727] mr-3 mt-1 flex-shrink-0" />
